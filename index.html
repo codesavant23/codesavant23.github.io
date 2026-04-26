@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Dev Portfolio – Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise-bg"></div>
+  <header>
+    <div class="profile-window">
+      <img src="profile.jpg" alt="Your profile photo" class="avatar">
+      <div>
+        <h1>Your Name</h1>
+        <p class="subtitle">Full Stack Developer &amp; Problem Solver</p>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="projects" class="section-window left-float">
+      <div class="section-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="section-title">/Projects</span>
+      </div>
+      <div class="projects-grid">
+        <article>
+          <h2>Unconventional Dashboard</h2>
+          <p>A dashboard built using cutting-edge web tech, mimicking a terminal UI (React, Tailwind, Websockets).</p>
+          <a href="#">View Repo →</a>
+        </article>
+        <article>
+          <h2>Smart Home Node</h2>
+          <p>IoT edge solution with custom C++ firmware &amp; a quirky API, built with ESP32 and Vue.js frontend.</p>
+          <a href="#">View Repo →</a>
+        </article>
+        <!-- Add more projects here -->
+      </div>
+    </section>
+
+    <section id="about" class="section-window right-float">
+      <div class="section-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="section-title">/About</span>
+      </div>
+      <div class="about-content">
+        <p>
+          Hi! I’m a developer obsessed with exploring digital “edges.” My specialty is fusing design, logic, and a little weirdness to make impactful products.<br>
+          <em>// Let’s ship the unconventional!</em>
+        </p>
+        <ul>
+          <li><strong>Languages:</strong> TypeScript, Rust, Python</li>
+          <li><strong>Focus:</strong> Human-computer interfaces, IoT, creative tooling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section-window left-float">
+      <div class="section-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="section-title">/Contact</span>
+      </div>
+      <form class="contact-form" autocomplete="off">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Jane Doe" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" placeholder="Hey, let’s build something!"></textarea>
+        </label>
+        <button type="submit">Send →</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <span>&copy; 2026 Your Name // <a href="#">GitHub</a> // <a href="#">LinkedIn</a></span>
+  </footer>
+</body>
+</html>
