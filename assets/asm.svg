@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="asm-colored.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5761719"
+     inkscape:cx="255.68278"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <!-- Esagono -->
+  <polygon
+     points="440,360 256,460 72,360 72,140 256,40 440,140 "
+     fill="#4f6bdc"
+     id="polygon1"
+     transform="matrix(1.2519675,0,0,1.196377,-61.489606,-42.749749)"
+     style="stroke-width:0.81709" />
+  <!-- Parte scura diagonale -->
+  <polygon
+     points="440,360 256,460 72,360 256,260 440,140 "
+     fill="#263f8f"
+     id="polygon2"
+     transform="matrix(1.2519675,0,0,1.196377,-61.489606,-42.749749)"
+     style="stroke-width:0.81709" />
+  <!-- Testo ASM -->
+  <text
+     x="261.11694"
+     y="276.62604"
+     text-anchor="middle"
+     dominant-baseline="middle"
+     font-family="Montserrat, Arial, sans-serif"
+     font-size="185.988px"
+     fill="#ffffff"
+     font-weight="bold"
+     id="text2"
+     style="stroke-width:1"
+     transform="scale(1.0229691,0.97754664)">ASM</text>
+</svg>
