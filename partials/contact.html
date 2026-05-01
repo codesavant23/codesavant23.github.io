@@ -1,0 +1,49 @@
+<div>
+	<p class="eyebrow">Contact</p>
+	<h2>Got a scalar product, an idea, or a system to <br/> re-create?</h2>
+	<p class="lead">Write me few lines: I'll answer to understand context, constraints e technical milestones.</p>
+</div>
+		  
+<form
+	class="contact-form" 
+	action="https://formspree.io/f/mnjwqgje" 
+	method="POST"
+>
+	<label>
+		Name
+		<input type="text" name="name" placeholder="Personal name or agency name">
+	</label>
+	<label>
+		Your email
+		<input type="email" name="email" placeholder="agencyx@startup.com">
+	</label>
+	<label>
+		<input type="hidden" name="request" id="request-value" value="System integration">
+		
+		Request Type
+		<div class="fake-select" data-fake-select>
+			<button type="button" class="fake-select-trigger" aria-expanded="false">
+				<span data-fake-selected>System integration</span>
+				<span class="fake-select-arrow"></span>
+			</button>
+
+			<div class="fake-select-menu">
+				<button type="button" data-value="New project">New project</button>
+				<button type="button" data-value="Architecture review">Architecture review</button>
+				<button type="button" data-value="System integration" class="active">System integration</button>
+				<button type="button" data-value="Get-to-know-you Meeting">Get-to-know-you Meeting</button>
+				<button type="button" data-value="Other">Other</button>
+			</div>
+		</div>
+	</label>
+	<label>
+		Your message
+		<textarea 
+			name="message" 
+			rows="6" 
+			placeholder="Tell me what you want to build...">
+		</textarea>
+	</label>
+				
+	<button class="btn primary" type="submit">Send Message</button>
+</form>

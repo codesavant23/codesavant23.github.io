@@ -1,0 +1,157 @@
+.contact {
+	display: grid;
+	grid-template-columns: .9fr 1.1fr;
+	gap: 46px;
+	align-items: start
+}
+
+.contact-form {
+	display: grid;
+	gap: 14px
+}
+
+.contact-form label {
+	display: grid;
+	gap: 8px;
+	color: #dfe2ee;
+	font-weight: 700;
+	font-size: .9rem
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select.request-list {
+	width: 100%;
+	border: 1px solid var(--line);
+	border-radius: 16px;
+	padding: 14px 15px;
+	background: rgba(0, 0, 0, .22);
+	color: var(--text);
+	font: inherit;
+	outline: 0
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select.request-list:focus {
+	border-color: rgba(255, 90, 31, .7)
+}
+
+/* Campo chiuso (lascia coerente) */
+.contact-form select.request-list {
+  background: rgba(0, 0, 0, .22);
+}
+
+
+
+
+
+
+
+
+
+.fake-select {
+  position: relative;
+}
+
+.fake-select-trigger {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 15px;
+  background: rgba(0, 0, 0, .22);
+  color: var(--text);
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  outline: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fake-select.open .fake-select-trigger {
+  border-color: rgba(255, 90, 31, .7);
+}
+
+.fake-select-arrow {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Creiamo la freccia con CSS */
+.fake-select-arrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--text);
+  border-bottom: 2px solid var(--text);
+  transform: rotate(45deg);
+  margin-top: -2px; /* centratura fine */
+  transition: transform .2s ease;
+}
+
+/* Rotazione quando aperto */
+.fake-select.open .fake-select-arrow::before {
+  transform: rotate(-135deg);
+  margin-top: 2px;
+}
+
+.fake-select.open .fake-select-arrow {
+  transform: rotate(180deg);
+}
+
+.fake-select-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+
+  padding: 7px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 16px;
+
+  background: #20222e;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: .18s ease;
+}
+
+.fake-select.open .fake-select-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.fake-select-menu button {
+  width: 100%;
+  border: 0;
+  border-radius: 11px;
+  padding: 11px 12px;
+
+  background: transparent;
+  color: #eef1f8;
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fake-select-menu button:hover {
+  background: rgba(255, 255, 255, .08);
+}
+
+.fake-select-menu button.active {
+  background: linear-gradient(135deg, rgba(255, 90, 31, .92), rgba(139, 92, 246, .82));
+  color: #fff;
+}

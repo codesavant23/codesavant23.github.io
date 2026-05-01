@@ -1,0 +1,33 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile-info,
+.profile-info *,
+.availability,
+.availability * {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: .32;
+		transform: scale(.96)
+	}
+
+	50% {
+		opacity: .52;
+		transform: scale(1.04)
+	}
+}

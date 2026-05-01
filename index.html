@@ -1,306 +1,171 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Software Architect & Developer Portfolio</title>
-  <meta name="description" content="Portfolio moderno per Software Architect & Developer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>codesavant23 Portfolio</title>
+	<meta name="description" content="codesavant23 Portfolio" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
+	<div id="page-loader">
+		<div class="loader"></div>
+	</div>
+	<div class="noise" aria-hidden="true"></div>
 
-  <header class="nav-wrap">
-    <nav class="nav">
-      <a class="brand" href="https://www.github.com/codesavant23"><span class="brand-dot"></span>codesavant23</a>
-      <button class="menu-btn" aria-label="Apri menu">☰</button>
-      <div class="nav-links">
-        <a href="#technology">Skills</a>
-        <!--<a href="#experience">Experience</a>-->
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a class="nav-cta" href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+	<header id="header" class="nav-wrap">
+	</header>
 
-  <main id="home">
-    <section class="hero section">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Software Architect & Developer</p>
-        <h1>Designing robust architectures for scalable software artifacts.</h1>
-        <p class="lead">I transform complex requirements into clean, observable and maintainable systems: classic desktop and multi-platform applications, backend, cloud, integrations, with performance and grounded developer experience.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">Projects</a>
-          <a class="btn ghost" href="#contact">Get in touch!</a>
-        </div>
-        <div class="metrics">
-          <div><strong>12+</strong><span>yrs of experience</span></div>
-          <div><strong>40+</strong><span>servizi/API</span></div>
-          <div><strong>99.9%</strong><span>focus reliability</span></div>
-        </div>
-      </div>
+	<main id="home">
+		<section id="hero" class="hero section">
+		</section>
 
-      <aside class="profile-shell reveal" aria-label="Profilo">
-		<div class="profile-stage">
-			<div class="profile-card-rotate">
-				<div class="profile-card-white" role="button" tabindex="0" aria-expanded="false" aria-controls="about-me-panel">
-				  <div class="profile-image-wrap">
-					<!-- height: 1100 | width: 760 -->
-					<img src="assets/profile_suite.png" alt="Avatar profilo" />
-				  </div>
-				  <div class="profile-info">
-					<span class="availability"><i></i> Available for an online meeting</span>
-					<h2>Filippo Mecozzi</h2>
-					<p>Solution designer & Software Architect • Developer • Versatile </p>
-				  </div>
-				</div>
+		<section id="technology" class="section reveal">
+			<div class="section-head compact">
+				<p class="eyebrow">Skills</p>
+				<h2>Skills, Languages & Technologies</h2>
+				<p class="section-copy">A selection of languages, technologies and skills studied/used through out my career.<br/>
+				The confidence level written is estimated based on self-assessment</p>
 			</div>
 
-			<section class="about-me-panel" id="about-me-panel" aria-hidden="true">
-			  <p class="eyebrow">About Me</p>
-			  <h2>A little piece of my story</h2>
-			  <p> I'm a Solution Designer specialized in modular, scalable and clean Software Architectures with a strong developer background.
-			  <br/><br/>
-			  
-			  My I.T. story starts at 7-8yrs old when i started to love programming with the dream of becoming a developer.<br/>
-			  Later I attended technical high-school (in computer science) building a strong, and practical, foundation in development.
-			  <br/><br/>
-			  
-			  Then I studied IoT and AI at university which also allowed me to refine my software design skills to the point of almost mastering them.
-			  <br/><br/>
-			  
-			  Interesting fact: Recently got closer again to Christian faith, and some months ago i accepted Jesus as my personal Savior and Lord of my life.
-			  </p>
-			  <div class="about-highlights">
-				<span>Architecture</span>
-				<span>Backend</span>
-				<span>Cloud</span>
-				<span>Mentoring</span>
-			  </div>
-			</section>
-		</div>
-      </aside>
-    </section>
+			<div class="tech-categories">
+				<article id="dev-langs" class="tech-box">
+				</article>
 
-    <section id="technology" class="section reveal">
-      <div class="section-head compact">
-        <p class="eyebrow">Skills</p>
-        <h2>Skills, Languages & Technologies</h2>
-        <p class="section-copy">Una selezione di tecnologie che uso per progettare, costruire e far evolvere sistemi affidabili.</p>
-      </div>
-
-      <div class="tech-categories">
-        <article class="tech-box">
-          <header><span>01</span><h3>Programming Languages</h3></header>
-          <div class="icon-grid">
-		    <div class="tech-icon"><img src="https://skillicons.dev/icons?i=c" alt="C"><b>C</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=cs" alt="C#"><b>C#</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=cpp" alt="C++"><b>C++</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=java" alt="Java"><b>Java</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=python" alt="Python"><b>Python</b></div>
-			<div class="tech-icon"><img src="assets/asm.svg" alt="ASM"><b>Assembly x64</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=rust" alt="Rust"><b>Rust</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=lua" alt="Lua"><b>Lua</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=arduino" alt="Arduino"><b>Arduino</b></div>
-          </div>
-        </article>
-
-        <article class="tech-box">
-          <header><span>02</span><h3>Web Related</h3></header>
-          <div class="icon-grid">
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=html" alt="HTML"><b>HTML</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=css" alt="CSS"><b>CSS</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=php" alt="PHP"><b>PHP</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"><b>JavaScript</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.JS"><b>Node.JS</b></div>
-          </div>
-        </article>
-		
-		<article class="tech-box">
-          <header><span>03</span><h3>Knowledge Management</h3></header>
-          <div class="icon-grid">
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=markdown" alt="Markdown"><b>Markdown</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=latex" alt="Latex"><b>LaTeX</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=obsidian" alt="Obsidian"><b>Obsidian</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=notion" alt="Notion"><b>Notion</b></div>
-          </div>
-        </article>
-		
-		<article class="tech-box">
-          <header><span>04</span><h3>ML/DL, Data Analysis & Statistics</h3></header>
-          <div class="icon-grid">
-			<div class="tech-icon"><img src="assets/scikit_learn.svg" alt=""><b>SciKit Learn</b></div>
-			<div class="tech-icon"><img src="assets/keras.svg" alt=""><b>Keras</b></div>
-			<div class="tech-icon"><img src="assets/seaborn.svg" alt=""><b>Seaborn</b></div>
-			<div class="tech-icon"><img src="assets/matplotlib.svg" alt=""><b>MatPlotLib</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=r" alt="R Language"><b>R Language</b></div>
-          </div>
-        </article>
-		
-        <article class="tech-box">
-          <header><span>05</span><h3>Data & Cloud</h3></header>
-          <div class="icon-grid">
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL"><b>Postgres</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=mysql" alt="MySQL"><b>MySQL</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite"><b>SQLite</b></div>
-			<div class="tech-icon"><img src="assets/influxdb.svg" alt="InfluxDB"><b>Influx DB</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=grafana" alt="Grafana"><b>Grafana</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=aws" alt="AWS"><b>AWS</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"><b>Docker</b></div>
-          </div>
-        </article>
-		
-		<article class="tech-box">
-          <header><span>06</span><h3>Misc Skills/Technologies</h3></header>
-          <div class="icon-grid">
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=regex" alt="Regular Expressions"><b>Regular Expressions</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=linux" alt="Linux"><b>Linux</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=debian" alt="Debian"><b>Debian</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=bash" alt="Bash Scripting"><b>Bash Scripting</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=vim" alt="Vim"><b>Vim</b></div>
-            <div class="tech-icon"><img src="https://skillicons.dev/icons?i=git" alt="Git"><b>Git</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=idea" alt="Intellij IDEA"><b>Intellij IDEA</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=pycharm" alt="Intellij PyCharm"><b>Intellij PyCharm</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=rider" alt="Intellij Rider"><b>Intellij Rider</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=eclipse" alt="Eclipse"><b>Eclipse</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=dotnet" alt=".NET"><b>.NET</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=threejs" alt="ThreeJS"><b>ThreeJS</b></div>
-			<div class="tech-icon"><img src="https://skillicons.dev/icons?i=raspberrypi" alt="Raspberry Pi"><b>Raspberry Pi</b></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!--<section id="experience" class="section reveal">
-      <div class="section-head">
-        <p class="eyebrow">Work Experience</p>
-        <h2>Dal codice alla strategia tecnica.</h2>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item"><span>2022 — Oggi</span><h3>Software Architect</h3><p>Definizione di architetture cloud-native, standard tecnici, review, governance e mentoring dei team.</p><div class="tags"><b>Architecture</b><b>Cloud</b><b>Leadership</b></div></article>
-        <article class="timeline-item"><span>2018 — 2022</span><h3>Senior Developer</h3><p>Progettazione e sviluppo di piattaforme enterprise, integrazioni B2B, automazioni e API scalabili.</p><div class="tags"><b>Backend</b><b>API</b><b>CI/CD</b></div></article>
-        <article class="timeline-item"><span>2014 — 2018</span><h3>Full-stack Developer</h3><p>Costruzione end-to-end di web app, dashboard operative e sistemi gestionali ad alto impatto business.</p><div class="tags"><b>Web</b><b>SQL</b><b>UX</b></div></article>
-      </div>
-    </section>-->
-
-    <section id="education" class="section reveal">
-      <div class="section-head">
-        <p class="eyebrow">Education Roadmap</p>
-        <h2>Training & Growth</h2>
-      </div>
-      <div class="roadmap">
-        <div class="roadmap-line"></div>
-        <article class="reveal"><span>2019</span><h3>High school Diploma in Computer Science</h3><p>Programming fundamentals, algorithms, databases, advanced networking, advanced programming and software design.</p></article>
-		<article class="reveal"><span>2020-2024</span><h3>University Studies</h3><p>Studied mainly IoT, data analysis, machine and deep learning, algorithms and data structures, software engineering, database systems, cloud computing and computer vision.</p></article>
-        <article class="reveal"><span>2024-2026</span><h3>Self-Mastered Software Architect</h3><p>Built on a formal software engineering background, I independently deepened and almost mastered architectural design, system thinking, and real-world engineering practices through continuous self-driven study and hands-on experience.</p></article>
-        <article class="reveal"><span>April 2026</span><h3>Bachelor Degree</h3><p>Graduated in "IoT, Big Data & Web" presenting the Python framework GenTestsAI and its library GenTestsAILib.</p></article>
-        <!--<article class="reveal"><span>Today</span><h3>Architecture leadership</h3><p>Decision record, technical strategy, platform engineering e mentoring cross-team.</p></article>-->
-      </div>
-    </section>
-
-    <section id="projects" class="section reveal">
-      <div class="section-head compact">
-        <p class="eyebrow">Featured Projects</p>
-        <h2>Project Selection</h2>
-        <p class="section-copy">Card grandi e descrittive con immagine, stack e link, ispirate al layout del riferimento ma adattate al tema scuro.</p>
-      </div>
-      <div class="project-showcase">
-        <article class="project-card featured">
-          <div class="project-media gradient-a">
-            <div class="browser-bar"><i></i><i></i><i></i></div>
-            <div class="mock-dashboard">
-              <span></span><span></span><span></span><span></span>
-            </div>
-          </div>
-          <div class="project-content">
-            <p class="project-kicker">Architecture / Platform</p>
-            <h3>Cloud Migration Platform</h3>
-            <p>Modernizzazione applicativa con pipeline automatizzate, template infrastrutturali e ambienti multi-stage pensati per team distribuiti.</p>
-            <div class="project-tech"><img src="https://skillicons.dev/icons?i=aws" alt="AWS"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"><img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions"><img src="https://skillicons.dev/icons?i=terraform" alt="Terraform"></div>
-            <div class="project-links"><a href="#">Live</a><a href="#">Source</a></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-media gradient-b">
-            <div class="browser-bar"><i></i><i></i><i></i></div>
-            <div class="mock-api"><span>GET /identity</span><span>POST /token</span><span>GraphQL</span></div>
-          </div>
-          <div class="project-content">
-            <p class="project-kicker">Security / API</p>
-            <h3>API Gateway & Identity</h3>
-            <p>Centralizzazione autenticazione, policy, rate limiting, audit log e standard REST/GraphQL per domini enterprise.</p>
-            <div class="project-tech"><img src="https://skillicons.dev/icons?i=dotnet" alt=".NET"><img src="https://skillicons.dev/icons?i=graphql" alt="GraphQL"><img src="https://skillicons.dev/icons?i=redis" alt="Redis"></div>
-            <div class="project-links"><a href="#">Case study</a><a href="#">Source</a></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-media gradient-c">
-            <div class="browser-bar"><i></i><i></i><i></i></div>
-            <div class="mock-lines"><span></span><span></span><span></span><span></span></div>
-          </div>
-          <div class="project-content">
-            <p class="project-kicker">Reliability / DevOps</p>
-            <h3>Observability Stack</h3>
-            <p>Metriche, tracing distribuito, alerting e dashboard operative per ridurre MTTR e aumentare la qualità del delivery.</p>
-            <div class="project-tech"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes"><img src="https://skillicons.dev/icons?i=prometheus" alt="Prometheus"><img src="https://skillicons.dev/icons?i=grafana" alt="Grafana"></div>
-            <div class="project-links"><a href="#">Case study</a><a href="#">Source</a></div>
-          </div>
-        </article>
-      </div>
-      <a class="view-all" href="#">View all projects →</a>
-    </section>
-
-    <section id="contact" class="section contact reveal">
-		<div>
-			<p class="eyebrow">Contact</p>
-			<h2>Got a scalar product, an idea, or a system to <br/> re-create?</h2>
-			<p class="lead">Write me few lines: I'll answer to understand context, constraints e technical milestones.</p>
-		</div>
-	  
-		<form
-			class="contact-form" 
-			action="https://formspree.io/f/mnjwqgje" 
-			method="POST"
-		>
-			<label>
-				Name
-				<input type="text" name="name" placeholder="Personal name or agency name">
-			</label>
-			<label>
-				Your email
-				<input type="email" name="email" placeholder="agencyx@startup.com">
-			</label>
-			<label>Project Type
-				<select name="project">
-					<option>New project</option>
-					<option>Architecture review</option>
-					<!--<option>Technical consultancy</option>-->
-					<option>System integration</option>
-					<option>Other</option>
-				</select>
-			</label>
-			<label>
-				Your message
-				<textarea name="message" rows="6" placeholder="Tell me what you want to build..."></textarea>
-			</label>
+				<article id="web-langs" class="tech-box">
+				</article>
 			
+				<article id="know-techs" class="tech-box">
+				</article>
 			
+				<article id="ai-da-stat-techs" class="tech-box">
+				</article>
 			
-			<button class="btn primary" type="submit">Send Message</button>
-		</form>
-    </section>
-  </main>
+				<article id="db-cloud-techs" class="tech-box">
+				</article>
+			
+				<article id="misc-techs" class="tech-box">
+				</article>
+			</div>
+		</section>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Filippo Mecozzi &mdash; Built for GitHub Pages.</p>
-  </footer>
+		<section id="experience" class="section reveal">
+		</section>
 
-  <script src="script.js"></script>
+		<section id="education" class="section reveal">
+		</section>
+
+		<section id="projects" class="section reveal">
+			<div class="section-head compact">
+			<p class="eyebrow">Featured Projects</p>
+			<h2>Project Selection</h2>
+			<p class="section-copy">Card grandi e descrittive con immagine, stack e link, ispirate al layout del riferimento ma adattate al tema scuro.</p>
+			</div>
+			<div class="project-showcase">
+			<article class="project-card featured">
+				<div class="project-media gradient-a">
+				<div class="browser-bar"><i></i><i></i><i></i></div>
+				<div class="mock-dashboard">
+					<span></span><span></span><span></span><span></span>
+				</div>
+				</div>
+				<div class="project-content">
+				<p class="project-kicker">Architecture / Platform</p>
+				<h3>Cloud Migration Platform</h3>
+				<p>Modernizzazione applicativa con pipeline automatizzate, template infrastrutturali e ambienti multi-stage pensati per team distribuiti.</p>
+				<div class="project-tech"><img src="https://skillicons.dev/icons?i=aws" alt="AWS"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"><img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions"><img src="https://skillicons.dev/icons?i=terraform" alt="Terraform"></div>
+				<div class="project-links"><a href="#">Live</a><a href="#">Source</a></div>
+				</div>
+			</article>
+
+			<article class="project-card">
+				<div class="project-media gradient-b">
+				<div class="browser-bar"><i></i><i></i><i></i></div>
+				<div class="mock-api"><span>GET /identity</span><span>POST /token</span><span>GraphQL</span></div>
+				</div>
+				<div class="project-content">
+				<p class="project-kicker">Security / API</p>
+				<h3>API Gateway & Identity</h3>
+				<p>Centralizzazione autenticazione, policy, rate limiting, audit log e standard REST/GraphQL per domini enterprise.</p>
+				<div class="project-tech"><img src="https://skillicons.dev/icons?i=dotnet" alt=".NET"><img src="https://skillicons.dev/icons?i=graphql" alt="GraphQL"><img src="https://skillicons.dev/icons?i=redis" alt="Redis"></div>
+				<div class="project-links"><a href="#">Case study</a><a href="#">Source</a></div>
+				</div>
+			</article>
+
+			<article class="project-card">
+				<div class="project-media gradient-c">
+				<div class="browser-bar"><i></i><i></i><i></i></div>
+				<div class="mock-lines"><span></span><span></span><span></span><span></span></div>
+				</div>
+				<div class="project-content">
+				<p class="project-kicker">Reliability / DevOps</p>
+				<h3>Observability Stack</h3>
+				<p>Metriche, tracing distribuito, alerting e dashboard operative per ridurre MTTR e aumentare la qualità del delivery.</p>
+				<div class="project-tech"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes"><img src="https://skillicons.dev/icons?i=prometheus" alt="Prometheus"><img src="https://skillicons.dev/icons?i=grafana" alt="Grafana"></div>
+				<div class="project-links"><a href="#">Case study</a><a href="#">Source</a></div>
+				</div>
+			</article>
+			</div>
+			<a class="view-all" href="#">View all projects</a>
+		</section>
+
+		<section id="contact" class="section contact reveal">
+		</section>
+	</main>
+
+	<footer id="footer"></footer>
+	<script>
+		async function include(id, file) {
+			const el = document.getElementById(id);
+			if (!el) {
+				console.error(`Elemento #${id} non trovato`);
+				return;
+			}
+
+			const res = await fetch(file);
+			if (!res.ok) {
+				console.error(`Errore caricando ${file}: ${res.status}`);
+				return;
+			}
+
+			el.innerHTML = await res.text();
+		}
+
+		async function loadPartials() {
+			await Promise.all([
+				include("header", "partials/header.html"),
+				include("hero", "partials/hero.html"),
+
+				include("dev-langs", "partials/skills/dev_langs.html"),
+				include("web-langs", "partials/skills/web_langs.html"),
+				include("know-techs", "partials/skills/know_techs.html"),
+				include("ai-da-stat-techs", "partials/skills/ai_da_stat_techs.html"),
+				include("db-cloud-techs", "partials/skills/db_cloud_techs.html"),
+				include("misc-techs", "partials/skills/misc_techs.html"),
+				
+				include("experience", "partials/experience.html"),
+				include("education", "partials/education.html"),
+				
+				include("contact", "partials/contact.html"),
+				include("footer", "partials/footer.html")
+			]);
+
+			await import("./script.js");
+			
+			const loader = document.getElementById("page-loader");
+			setTimeout(
+				() => {
+					loader.classList.add("hidden")
+				},
+				150
+			);
+		}
+
+		loadPartials();
+	</script>
+
 </body>
 </html>

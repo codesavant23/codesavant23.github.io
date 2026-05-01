@@ -1,0 +1,13 @@
+@media(max-width:520px) {
+	.metrics {
+		grid-template-columns: 1fr
+	}
+
+	.hero h1 {
+		font-size: 3.1rem
+	}
+
+	.icon-grid {
+		grid-template-columns: repeat(2, 1fr)
+	}
+}
