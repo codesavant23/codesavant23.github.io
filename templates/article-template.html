@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Titolo Articolo — codesavant23 Portfolio</title>
+	<meta name="description" content="Template per articolo o scritto del portfolio di codesavant23" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div class="noise" aria-hidden="true"></div>
+
+	<header id="header" class="nav-wrap">
+	</header>
+
+	<main class="article-page">
+		<section class="article-hero reveal">
+			<a class="back-link" href="index.html#projects">
+				Torna al portfolio
+			</a>
+			<p class="article-kicker">Categoria / Articolo</p>
+			<h1 class="article-title">Titolo del tuo articolo, scritto o approfo</h1>
+			<p class="article-summary">Una breve introduzione in stile abstract: spiega il contesto, il problema affrontato e il valore principale del contenuto in due o tre righe.</p>
+			<div class="article-meta" aria-label="Metadati articolo">
+				<span>12 Gennaio 2026</span>
+				<span>8 min read</span>
+				<span>Autore: codesavant23</span>
+			</div>
+		</section>
+
+		<div class="article-shell">
+			<aside class="toc-card" aria-label="Indice dell'articolo">
+				<h2>Index</h2>
+				<a href="#intro">Introduzione</a>
+				<a href="#contesto">Contesto</a>
+				<a href="#approccio">Approccio</a>
+				<a href="#risultati">Risultati</a>
+				<a href="#conclusioni">Conclusioni</a>
+			</aside>
+
+			<article class="article-card">
+				<div class="article-cover">
+					<img
+						class="article-cover-image"
+						src="assets/bible_banner.png"
+						alt="Banner dell'articolo Life Testimony"
+						loading="eager"
+					/>
+				</div>
+
+				<div class="article-content">
+					<section id="intro">
+						<h2>Introduzione</h2>
+						<p>Questo template è pensato per testi lunghi, articoli tecnici, note di progetto, changelog ragionati o post editoriali. La struttura replica la leggibilità di un file Markdown, mantenendo però il visual design del portfolio.</p>
+						<p>Puoi sostituire ogni sezione con i tuoi contenuti: titolo, sottotitoli, paragrafi, liste, citazioni, blocchi codice e callout sono già stilizzati.</p>
+					</section>
+
+					<section id="contesto">
+						<h2>Contesto</h2>
+						<p>Descrivi lo scenario di partenza, il problema o la motivazione. Questa sezione può includere link, riferimenti interni e concetti chiave in evidenza con <code>inline code</code>.</p>
+						<ul>
+							<li>Punto principale o vincolo iniziale.</li>
+							<li>Obiettivo che vuoi raggiungere.</li>
+							<li>Decisioni importanti prese durante il lavoro.</li>
+						</ul>
+					</section>
+
+					<section id="approccio">
+						<h2>Approccio</h2>
+						<h3>Sotto-sezione descrittiva</h3>
+						<p>Usa le sotto-sezioni per spezzare il testo e guidare la lettura. Il layout è progettato per contenuti tecnici ma funziona anche per articoli più narrativi.</p>
+
+						<blockquote>
+							Una citazione o insight importante può stare qui: breve, leggibile e visivamente separata dal resto del testo.
+						</blockquote>
+
+						<div class="article-callout">
+							<strong>Nota pratica</strong>
+							Questo box è utile per warning, takeaway, prerequisiti o link a risorse esterne.
+						</div>
+
+						<pre><code>// Esempio di blocco codice
+const article = {
+  title: "Titolo articolo",
+  type: "markdown-style template",
+  status: "ready"
+};</code></pre>
+					</section>
+
+					<section id="risultati">
+						<h2>Risultati</h2>
+						<p>Riassumi cosa è stato ottenuto, quali metriche sono migliorate o quali lezioni sono emerse. Puoi usare liste numerate per un flusso più procedurale.</p>
+						<ol>
+							<li>Primo risultato o passaggio.</li>
+							<li>Secondo risultato o evidenza.</li>
+							<li>Prossima evoluzione del lavoro.</li>
+						</ol>
+					</section>
+
+					<section id="conclusioni">
+						<h2>Conclusioni</h2>
+						<p>Chiudi l'articolo con un riepilogo sintetico, una riflessione o una call to action. Questa parte può rimandare ad altri progetti, repository o contatti.</p>
+					</section>
+				</div>
+
+				<div class="article-footer">
+					<div class="article-tags" aria-label="Tag articolo">
+						<span class="article-tag">#markdown</span>
+						<span class="article-tag">#portfolio</span>
+						<span class="article-tag">#template</span>
+					</div>
+					<a class="article-share" href="index.html#contact">Contattami</a>
+				</div>
+			</article>
+		</div>
+	</main>
+
+	<footer id="footer"></footer>
+	
+	<div class="image-modal" id="imageModal" aria-hidden="true">
+		<button class="image-modal-nav image-modal-prev" type="button" aria-label="Previous image">
+			<span class="arrow left arrow-size-small arrow-fix"></span>
+		</button>
+		
+		<img src="" alt="">
+		
+		<button class="image-modal-nav image-modal-next" type="button" aria-label="Next image">
+			<span class="arrow right arrow-size-small arrow-fix"></span>
+		</button>
+
+		<button class="image-modal-close" type="button" aria-label="Close image">
+			<span>&times;</span>
+		</button>
+	</div>
+	
+	<script type="module">
+		import {include, loadPageParts, loadPageBehavior} from "./js/html_loader.js";
+		import {idleImagesModals} from "./js/image_modals.js";
+
+		const parts_to_load = [
+			include("header", "partials/header.html"),
+			include("footer", "partials/footer.html")
+		];
+		
+		await loadPageParts(parts_to_load);
+		idleImagesModals();
+	
+		import("./js/menu.js");
+		import("./js/footer.js");
+	</script>
+</body>
+</html>

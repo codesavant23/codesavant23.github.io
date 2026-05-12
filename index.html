@@ -14,6 +14,7 @@
 	<div id="page-loader">
 		<div class="loader"></div>
 	</div>
+	
 	<div class="noise" aria-hidden="true"></div>
 
 	<header id="header" class="nav-wrap">
@@ -62,54 +63,61 @@
 			<div class="section-head compact">
 			<p class="eyebrow">Featured Projects</p>
 			<h2>Project Selection</h2>
-			<p class="section-copy">Card grandi e descrittive con immagine, stack e link, ispirate al layout del riferimento ma adattate al tema scuro.</p>
+			<p class="section-copy">Some of my projects developed through my journey into the I.T. field.</p>
 			</div>
 			<div class="project-showcase">
-			<article class="project-card featured">
-				<div class="project-media gradient-a">
-				<div class="browser-bar"><i></i><i></i><i></i></div>
-				<div class="mock-dashboard">
-					<span></span><span></span><span></span><span></span>
-				</div>
-				</div>
-				<div class="project-content">
-				<p class="project-kicker">Architecture / Platform</p>
-				<h3>Cloud Migration Platform</h3>
-				<p>Modernizzazione applicativa con pipeline automatizzate, template infrastrutturali e ambienti multi-stage pensati per team distribuiti.</p>
-				<div class="project-tech"><img src="https://skillicons.dev/icons?i=aws" alt="AWS"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"><img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions"><img src="https://skillicons.dev/icons?i=terraform" alt="Terraform"></div>
-				<div class="project-links"><a href="#">Live</a><a href="#">Source</a></div>
-				</div>
-			</article>
+				<article class="project-card featured">
+					<div class="project-media project-media-image">
+						<img src="assets/gtsai_preview.png" alt="Preview del progetto GenTests AI">
+					</div>
+					<div class="project-content">
+						<p class="project-kicker">Architecture / Framework</p>
+						<h3>GenTestsAI: a framework to automatically generate unit tests in Python (using LLMs)</h3>
+						<p>
+							Creation of a software artifact in pure Python, with SOLID paradigm, which allows the automatic generation of unit tests through the use of only LLMs.
+						</p>
+						<div class="project-tech">
+							<img src="https://skillicons.dev/icons?i=python" alt="Python">
+							<img src="https://skillicons.dev/icons?i=docker" alt="Docker">
+							<img src="assets/techs/ollama_34x50_filled.svg" alt="Ollama Platform">
+							<img src="assets/techs/tree-sitter-small.svg" alt="TreeSitter">
+						</div>
+						<div class="project-links">
+							<a href="gtsai-detail.html">Case study</a>
+							<a href="https://www.github.com/codesavant23/gentestsai">Source</a>
+						</div>
+					</div>
+				</article>
 
-			<article class="project-card">
-				<div class="project-media gradient-b">
-				<div class="browser-bar"><i></i><i></i><i></i></div>
-				<div class="mock-api"><span>GET /identity</span><span>POST /token</span><span>GraphQL</span></div>
-				</div>
-				<div class="project-content">
-				<p class="project-kicker">Security / API</p>
-				<h3>API Gateway & Identity</h3>
-				<p>Centralizzazione autenticazione, policy, rate limiting, audit log e standard REST/GraphQL per domini enterprise.</p>
-				<div class="project-tech"><img src="https://skillicons.dev/icons?i=dotnet" alt=".NET"><img src="https://skillicons.dev/icons?i=graphql" alt="GraphQL"><img src="https://skillicons.dev/icons?i=redis" alt="Redis"></div>
-				<div class="project-links"><a href="#">Case study</a><a href="#">Source</a></div>
-				</div>
-			</article>
+				<!--<article class="project-card">
+					<div class="project-media gradient-b">
+					<div class="browser-bar"><i></i><i></i><i></i></div>
+					<div class="mock-api"><span>GET /identity</span><span>POST /token</span><span>GraphQL</span></div>
+					</div>
+					<div class="project-content">
+					<p class="project-kicker">Security / API</p>
+					<h3>API Gateway & Identity</h3>
+					<p>Centralizzazione autenticazione, policy, rate limiting, audit log e standard REST/GraphQL per domini enterprise.</p>
+					<div class="project-tech"><img src="https://skillicons.dev/icons?i=dotnet" alt=".NET"><img src="https://skillicons.dev/icons?i=graphql" alt="GraphQL"><img src="https://skillicons.dev/icons?i=redis" alt="Redis"></div>
+					<div class="project-links"><a href="project-detail-template.html">Case study</a><a href="#">Source</a></div>
+					</div>
+				</article>
 
-			<article class="project-card">
-				<div class="project-media gradient-c">
-				<div class="browser-bar"><i></i><i></i><i></i></div>
-				<div class="mock-lines"><span></span><span></span><span></span><span></span></div>
-				</div>
-				<div class="project-content">
-				<p class="project-kicker">Reliability / DevOps</p>
-				<h3>Observability Stack</h3>
-				<p>Metriche, tracing distribuito, alerting e dashboard operative per ridurre MTTR e aumentare la qualità del delivery.</p>
-				<div class="project-tech"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes"><img src="https://skillicons.dev/icons?i=prometheus" alt="Prometheus"><img src="https://skillicons.dev/icons?i=grafana" alt="Grafana"></div>
-				<div class="project-links"><a href="#">Case study</a><a href="#">Source</a></div>
-				</div>
-			</article>
+				<article class="project-card">
+					<div class="project-media gradient-c">
+					<div class="browser-bar"><i></i><i></i><i></i></div>
+					<div class="mock-lines"><span></span><span></span><span></span><span></span></div>
+					</div>
+					<div class="project-content">
+					<p class="project-kicker">Reliability / DevOps</p>
+					<h3>Observability Stack</h3>
+					<p>Metriche, tracing distribuito, alerting e dashboard operative per ridurre MTTR e aumentare la qualità del delivery.</p>
+					<div class="project-tech"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes"><img src="https://skillicons.dev/icons?i=prometheus" alt="Prometheus"><img src="https://skillicons.dev/icons?i=grafana" alt="Grafana"></div>
+					<div class="project-links"><a href="project-detail-template.html">Case study</a><a href="article-template.html">Source</a></div>
+					</div>
+				</article>-->
 			</div>
-			<a class="view-all" href="#">View all projects</a>
+			<a class="view-all" href="https://www.github.com/codesavant23/">View All</a>
 		</section>
 
 		<section id="contact" class="section contact reveal">
@@ -117,54 +125,30 @@
 	</main>
 
 	<footer id="footer"></footer>
-	<script>
-		async function include(id, file) {
-			const el = document.getElementById(id);
-			if (!el) {
-				console.error(`Elemento #${id} non trovato`);
-				return;
-			}
+	
+	<script type="module">
+		import {include, loadPageParts, loadPageBehavior} from "./js/html_loader.js";
+	
+		const parts_to_load = [
+			include("header", "partials/header.html"),
+			include("hero", "partials/hero.html"),
 
-			const res = await fetch(file);
-			if (!res.ok) {
-				console.error(`Errore caricando ${file}: ${res.status}`);
-				return;
-			}
-
-			el.innerHTML = await res.text();
-		}
-
-		async function loadPartials() {
-			await Promise.all([
-				include("header", "partials/header.html"),
-				include("hero", "partials/hero.html"),
-
-				include("dev-langs", "partials/skills/dev_langs.html"),
-				include("web-langs", "partials/skills/web_langs.html"),
-				include("know-techs", "partials/skills/know_techs.html"),
-				include("ai-da-stat-techs", "partials/skills/ai_da_stat_techs.html"),
-				include("db-cloud-techs", "partials/skills/db_cloud_techs.html"),
-				include("misc-techs", "partials/skills/misc_techs.html"),
-				
-				include("experience", "partials/experience.html"),
-				include("education", "partials/education.html"),
-				
-				include("contact", "partials/contact.html"),
-				include("footer", "partials/footer.html")
-			]);
-
-			await import("./script.js");
+			include("dev-langs", "partials/skills/dev_langs.html"),
+			include("web-langs", "partials/skills/web_langs.html"),
+			include("know-techs", "partials/skills/know_techs.html"),
+			include("ai-da-stat-techs", "partials/skills/ai_da_stat_techs.html"),
+			include("db-cloud-techs", "partials/skills/db_cloud_techs.html"),
+			include("misc-techs", "partials/skills/misc_techs.html"),
 			
-			const loader = document.getElementById("page-loader");
-			setTimeout(
-				() => {
-					loader.classList.add("hidden")
-				},
-				150
-			);
-		}
-
-		loadPartials();
+			include("experience", "partials/experience.html"),
+			include("education", "partials/education.html"),
+			
+			include("contact", "partials/contact.html"),
+			include("footer", "partials/footer.html")
+		];
+		
+		await loadPageParts(parts_to_load);
+		await loadPageBehavior(180);
 	</script>
 
 </body>

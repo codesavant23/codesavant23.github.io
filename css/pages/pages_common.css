@@ -1,0 +1,350 @@
+:root {
+	--arrow-thick: 0rem;
+	--arrow-size: 0rem;
+}
+
+
+
+.arrow-size-big {
+	--arrow-thick: 0.5rem;
+	--arrow-size: calc(var(--arrow-thick) * 4);
+}
+
+.arrow-size-small {
+	--arrow-thick: 0.3rem;
+	--arrow-size: calc(var(--arrow-thick) * 3.5);
+}
+
+.arrow {
+	display: inline-block;
+	border-left: var(--arrow-thick) solid var(--muted);
+	border-bottom: var(--arrow-thick) solid var(--muted);
+	width: var(--arrow-size);
+	height: var(--arrow-size);
+}
+
+.right {
+	transform: rotate(225deg);
+	-webkit-transform: rotate(225deg);
+	--arrow-adj: -3px;
+}
+
+.left {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	--arrow-adj: 3px;
+}
+
+.arrow-fix {
+	translate: var(--arrow-adj);
+}
+
+
+
+.back-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--muted);
+	text-decoration: none;
+	font-weight: 800;
+	margin-bottom: 34px;
+	transition: .2s ease;
+}
+
+.back-link:hover {
+	color: var(--text);
+	transform: translateX(-3px);
+}
+
+
+.toc-card {
+	position: sticky;
+	top: 100px;
+	padding: 20px;
+}
+
+.toc-card h2 {
+	font-size: 1rem;
+	margin: 0 0 16px;
+}
+
+.toc-card a {
+	display: block;
+	color: var(--muted);
+	text-decoration: none;
+	font-weight: 500;
+	padding: 10px 0;
+	border-top: 1px solid var(--line);
+}
+
+.toc-card a:hover {
+	color: var(--text);
+}
+
+
+
+.content-card a,
+.content-card p a {
+	text-decoration: none;
+}
+
+.content-card a:link,
+.content-card p a:link {
+	color: var(--text);
+}
+
+.content-card a:hover,
+.content-card p a:hover,
+.content-card a:active,
+.content-card p a:active {
+	color: var(--accent);
+}
+
+.content-card a:visited,
+.content-card p a:visited {
+	color: var(--accent2);
+}
+
+
+/* ==================== Image Grid ======================= */
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+	margin: 34px 0;
+	width: 100%;
+}
+
+.image-grid-item,
+.image-item {
+	margin: 0;
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	border: 1px solid rgba(255, 255, 255, .16);
+	border-radius: 26px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, .06);
+	box-shadow: 0 18px 50px rgba(0, 0, 0, .22);
+	cursor: zoom-in;
+}
+
+.image-grid-item img,
+.image-item img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+	transition: transform .35s ease, filter .35s ease;
+}
+
+.image-grid-item:hover img,
+.image-item:hover img {
+	transform: scale(1.045);
+	filter: brightness(1.12);
+}
+
+/* 1 image: all width */
+.image-grid:has(.image-grid-item:only-child),
+.image-grid:has(.image-item:only-child) {
+	grid-template-columns: 1fr;
+}
+
+.image-grid:has(.image-grid-item:only-child) .image-grid-item,
+.image-grid:has(.image-item:only-child) .image-item {
+	aspect-ratio: 16 / 9;
+}
+
+/* 3 images: first all width, other 2 below the first */
+.image-grid:has(.image-grid-item:nth-child(3):last-child) .image-grid-item:first-child,
+.image-grid:has(.image-item:nth-child(3):last-child) .image-item:first-child {
+	grid-column: 1 / -1;
+	aspect-ratio: 16 / 8;
+}
+
+/* Modal */
+.image-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 24px;
+
+	background: rgba(3, 4, 10, .82);
+	backdrop-filter: blur(18px);
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+
+	transition:
+		opacity .28s ease,
+		visibility .28s ease,
+		backdrop-filter .28s ease;
+}
+
+.image-modal.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.image-modal img {
+	max-width: 96vw;
+	max-height: 90vh;
+
+	width: auto;
+	height: auto;
+
+	border-radius: 28px;
+	border: 1px solid rgba(255, 255, 255, .18);
+
+	box-shadow: 0 30px 90px rgba(0, 0, 0, .55);
+
+	object-fit: contain;
+
+	transform: scale(.92);
+	opacity: 0;
+
+	transition:
+		transform .34s cubic-bezier(.2, .8, .2, 1),
+		opacity .28s ease;
+}
+
+.image-modal.is-open img {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.image-modal-close {
+	display: flex;
+	position: fixed;
+	top: 22px;
+	right: 22px;
+
+	align-items: center;
+	justify-content: center;
+
+	width: 44px;
+	height: 44px;
+
+	border: 1px solid var(--line);
+	border-radius: 999px;
+
+	background: rgba(255, 255, 255, .09);
+	color: var(--text);
+
+	font-size: 1.6rem;
+	line-height: 1;
+	cursor: pointer;
+
+	transform: translateY(-8px);
+	opacity: 0;
+
+	transition:
+		opacity .25s ease,
+		transform .25s ease,
+		background .2s ease;
+}
+
+.image-modal-close span {
+	transform: translateY(-1.5px);
+}
+
+.image-modal.is-open .image-modal-close {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.image-modal-close:hover {
+	background: rgba(255, 255, 255, .18);
+}
+
+.image-modal-nav {
+	position: fixed;
+	top: 50%;
+	z-index: 10000;
+
+	width: 52px;
+	height: 52px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid rgba(255, 255, 255, .18);
+	border-radius: 999px;
+
+	background: rgba(255, 255, 255, .09);
+	color: var(--text);
+
+	font-size: 2.4rem;
+	line-height: 1;
+	cursor: pointer;
+
+	opacity: 0;
+	transform: translateY(-50%) scale(.92);
+
+	transition:
+		opacity .25s ease,
+		transform .25s ease,
+		background .2s ease;
+}
+
+.image-modal.is-open .image-modal-nav {
+	opacity: 1;
+	transform: translateY(-50%) scale(1);
+}
+
+.image-modal-nav:hover {
+	background: rgba(255, 255, 255, .18);
+}
+
+.image-modal-prev {
+	left: 24px;
+}
+
+.image-modal-next {
+	right: 24px;
+}
+
+
+
+@media(max-width: 620px) {
+	.image-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.image-grid:has(.image-grid-item:nth-child(3):last-child) .image-grid-item:first-child,
+	.image-grid:has(.image-item:nth-child(3):last-child) .image-item:first-child {
+		grid-column: auto;
+		aspect-ratio: 4 / 3;
+	}
+
+	.image-grid-item,
+	.image-item,
+	.image-grid:has(.image-grid-item:only-child) .image-grid-item,
+	.image-grid:has(.image-item:only-child) .image-item {
+		aspect-ratio: 4 / 3;
+	}
+	
+	.image-modal-nav {
+		width: 44px;
+		height: 44px;
+		font-size: 2rem;
+	}
+
+	.image-modal-prev {
+		left: 12px;
+	}
+
+	.image-modal-next {
+		right: 12px;
+	}
+}

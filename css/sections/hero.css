@@ -94,19 +94,8 @@
 	align-self: center;
 	justify-self: center;
 	width: clamp(260px, 28vw, 420px);
-	/*width: min(420px, 100%);*/
 	margin-top: -180px;
 }
-
-/*.profile-glow {
-	position: absolute;
-	inset: 12% -8% -6%;
-	border-radius: 40px;
-	background: radial-gradient(circle, var(--accent), transparent 58%);
-	filter: blur(45px);
-	opacity: .42;
-	animation: pulse 4.5s ease-in-out infinite
-}*/
 
 .profile-stage {
 	position: relative;

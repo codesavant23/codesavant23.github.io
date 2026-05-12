@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>GenTestsAI — codesavant23 Portfolio</title>
+	<meta name="description" content="GenTestsAI Project from codesavant23 Portfolio." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="project-detail-page">
+	<div class="noise" aria-hidden="true"></div>
+
+	<header id="header" class="nav-wrap">
+	</header>
+
+	<main>
+		<section class="detail-hero reveal">
+			<div>
+				<a class="back-link" href="index.html#projects">
+					Back to Projects
+				</a>
+				<p class="detail-kicker">Library&#43;Framework</p>
+				<h1 class="detail-title">GenTestsAI: a framework for automatic tests generation</h1>
+				<p class="detail-lead">
+					During my university career, following a specific study of the field of software engineering, I created, as the bachelor's thesis project, a Python framework that allows the automatic generation of tests using LLMs.
+				</p>
+				<div class="detail-actions">
+					<a class="detail-btn primary" href="https://www.github.com/codesavant23/gentestsai" target="_blank" rel="noreferrer">Repository</a>
+					<!--<a class="detail-btn" href="#" target="_blank" rel="noreferrer">Demo live</a>-->
+				</div>
+			</div>
+
+			<div class="detail-visual" aria-label="Visual preview of the Project">
+				<div class="project-media project-media-image">
+					<img src="assets/gtsai_preview.png" alt="Preview del progetto GenTests AI">
+				</div>
+			</div>
+		</section>
+
+		<section class="detail-meta reveal" aria-label="Informazioni principali">
+			<article class="meta-card">
+				<p class="meta-label">Role</p>
+				<p class="meta-value">SW Architect / Developer</p>
+			</article>
+			<article class="meta-card">
+				<p class="meta-label">Period</p>
+				<p class="meta-value">Sept. 2025 - April 2026</p>
+			</article>
+			<article class="meta-card">
+				<p class="meta-label">Stack</p>
+				<p class="meta-value">Python · Docker</p>
+			</article>
+			<article class="meta-card">
+				<p class="meta-label">Output</p>
+				<p class="meta-value">Library and Framework</p>
+			</article>
+		</section>
+
+		<section id="contenuto" class="detail-layout reveal">
+			<aside class="toc-card" aria-label="Indice pagina">
+				<h2>Index</h2>
+				<a href="#overview">Overview</a>
+				<a href="#challenge">Challenge</a>
+				<a href="#solution">Solution</a>
+				<a href="#impl">Implementation</a>
+				<a href="#limits">Limitations &amp; Future work</a>
+			</aside>
+
+			<div class="content-stack">
+				<article id="overview" class="content-card">
+					<h2>Overview</h2>
+					<p>GenTestsAI is a framework designed to automatically generate unit tests for Python projects using Large Language Models (LLMs). Developed as part of a Bachelor's thesis, it explores an alternative approach to traditional test generation techniques such as Search-Based Software Testing (SBST).</p>
+					
+					<p>The framework takes an entire Python project as input and produces structured test suites for each module, enabling developers to accelerate testing workflows with minimal manual effort. While primarily built around open-source LLMs, its modular architecture allows integration with external providers (e.g., OpenAI) through customizable inference accessors.</p>
+
+					<p>GenTestsAI is aimed at researchers, individual developers, and small teams, with the long-term vision of supporting more complex and large-scale software systems.</p>
+					<!--<div class="detail-highlight">Key note: riassumi in una frase il valore distintivo del lavoro o la lezione più importante.</div>-->
+				</article>
+
+				<article id="challenge" class="content-card">
+					<h2>Challenge</h2>
+					<p>Designing GenTestsAI required addressing several non-trivial challenges inherent to LLM-based code generation.</p>
+
+					<p>One of the primary difficulties was crafting effective prompt templates capable of producing meaningful and coherent unit tests across a wide variety of code structures. Early iterations revealed that raw generation alone was insufficient: generated tests were often syntactically incorrect or semantically unreliable.</p>
+
+					<p>This led to the introduction of iterative correction mechanisms, where generation, syntax fixing, and linting validation are repeated multiple times. However, this introduced a key trade-off: improved reliability comes at the cost of increased execution time.</p>
+
+					<p>Additional challenges included:</p>
+					<ul>
+						<li>Handling non-determinism and inconsistency in LLM outputs (such as <a href="https://arxiv.org/abs/2404.05411">semantic drifting</a>)</li>
+						<li>Managing limited computational resources (e.g., shared GPU environments)</li>
+						<li>Ensuring scalability across large Python codebases</li>
+					</ul>
+
+					<br/>
+					<p>To mitigate performance issues, a caching system was introduced, enabling resumable executions and reducing redundant computations.</p>
+				</article>
+
+				<article id="solution" class="content-card">
+					<h2>Solution</h2>
+					<p>GenTestsAI is structured as a two-layered system composed of:
+
+					<ul>
+						<li>GenTestsAILib → a reusable, modular library</li>
+						<li>GenTestsAI → the orchestration framework implementing the full workflow</li>
+					</ul>
+
+					<br/>
+					<p>The library is designed following SOLID principles, which grant loosely coupled components and stable interfaces, ensuring extensibility and long-term maintainability. The framework builds on top of it, organizing the theorized workflow into clearly defined functional processes.</p>
+					
+					<h3>Workflow</h3>
+					<p>The core pipeline operates as follows:</p>
+
+					<ol>
+						<li>Iterate over selected LLMs</li>
+						<li>Process each module of the input Python project</li>
+						<li>Extract and analyze source code using AST/CST parsing (default is via Tree-sitter)</li>
+						<li>Decompose modules into functions and class methods</li>
+						<li>For each unit:</li>
+							<ol>
+								<li>Generate a partial test suite using the LLM</li>
+								<li>Apply syntax correction (iterative)</li>
+								<li>Apply linting correction using the project’s execution environment</li>
+							</ol>
+						<li>If all steps succeed, merge the partial suite into the module’s final test suite</li>
+						<li>Otherwise, log the failed unit for traceability</li>
+					</ol>
+					
+					<p>Each phase supports configurable retry mechanisms, allowing users to balance execution time and output quality.</p>
+					
+					<h3>Key Components</h3>
+					<ul>
+						<li><b>ptsuite_generation</b></li>
+							<p>Handles generation, validation, and refinement of test suites. It represents the core engine of the framework.</p>
+						<li><b>focalproj_configuration</b></li>
+							<p>Manages isolated execution environments ("focal environments") used to validate generated tests against the target project.</p>
+					</ul>
+					
+					<h3>Technologies Used:</h3>
+					<div class="project-tech" aria-label="Technologies used">
+						<img src="https://skillicons.dev/icons?i=python" alt="Python">
+						<img src="https://skillicons.dev/icons?i=docker" alt="Docker">
+						<img src="assets/techs/tree-sitter-small.svg" alt="Tree-Sitter">
+						<img src="assets/techs/ollama_34x50_filled.svg" alt="Ollama Platform">
+					</div>
+				</article>
+
+				<article id="impl" class="content-card">
+					<h2>Implementation</h2>
+
+					<p>GenTestsAI provides a highly configurable and extensible system for automated test generation.<br/>
+					Key features include:</p>
+
+					<ul>
+						<li>Automatic unit test generation via LLMs</li>
+						<li>Iterative correction (syntax + linting)</li>
+						<li>Retry mechanisms for robustness</li>
+						<li>Statement-level and function-level coverage analysis</li>
+						<li>Extensive configurability of core components (LLMs, parsers, inference backends, hyperparameters)</li>
+					</ul>
+
+					<br/>
+					<p>The framework currently exposes a CLI interface, but its architecture naturally supports programmatic usage as a Python API.</p>
+
+					<p>A major strength of the project lies in GenTestsAILib, which is designed to be fully reusable and adaptable for different test generation workflows and research scenarios.</p>
+				</article>
+
+				<!--<article id="results" class="content-card">
+					<h2>Key aspects</h2>
+					<p>Here some aspects of GenTestsAI elicitated after a little empirical evaluation that has been conducted on the framework by using the project <a href="https://www.github.com/facebookresearch/detectron2">detectron2</a> as a study case.</p>
+					<div class="result-grid">
+						<div class="result-card">
+							<strong>&infin;</strong>
+							<span>Virtually unlimited compatible inference platforms</span>
+						</div>
+						<div class="result-card">
+							<strong>&infin;</strong>
+							<span>Virtually unlimited compatible LLMs and hyperparameters</span>
+						</div>
+					</div>
+				</article>-->
+
+				<article id="limits" class="content-card">
+					<h2>Limitation &amp; Future work</h2>
+					
+					<p>Despite its capabilities, GenTestsAI still faces several limitations.</p>
+
+					<p>Execution time and resource requirements remain significant, especially when working with large codebases or multiple LLMs. Additionally, the inherent non-determinism of LLMs can lead to issues such as hallucinations or semantic drifting, particularly when handling complex logic.</p>
+
+					<p>Future improvements include:</p>
+
+					<ul>
+						<li>Introducing semantic drift detection mechanisms</li>
+						<li>Decoupling pre-installed tooling from focal environment construction</li>
+						<li>Expanding support for customizable benchmarking pipelines</li>
+						<li>Improving efficiency through smarter orchestration strategies</li>
+					</ul>
+
+					<br/>
+					<p>These enhancements aim to make the framework more robust, scalable, and suitable for real-world adoption.</p>
+					
+					<!--<h2>Gallery / Allegati</h2>
+					<div class="detail-gallery">
+						<div class="gallery-tile"></div>
+						<div class="gallery-tile"></div>
+					</div>-->
+				</article>
+
+				<a class="content-card next-project" href="index.html#projects">
+					<span>Next Step:<strong>Explore other projects</strong></span>
+					<span class="arrow right"></span>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<footer id="footer">
+	</footer>
+
+	<script type="module">
+		import {include, loadPageParts, loadPageBehavior} from "./js/html_loader.js";
+		
+		const parts_to_load = [
+			include("header", "partials/header.html"),
+			include("footer", "partials/footer.html")
+		];
+		
+		await loadPageParts(parts_to_load);
+	
+		import("./js/menu.js");
+		import("./js/footer.js");
+	</script>
+</body>
+</html>

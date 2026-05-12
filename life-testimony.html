@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Jesus — codesavant23 Portfolio</title>
+	<meta name="description" content="Jesus in my life (by codesavant23)" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div id="page-loader">
+		<div class="loader"></div>
+	</div>
+
+	<div class="noise" aria-hidden="true"></div>
+
+	<header id="header" class="nav-wrap">
+	</header>
+
+	<main class="article-page">
+		<section class="article-hero reveal">
+			<a class="back-link" href="index.html#projects">
+				Back to Portfolio
+			</a>
+			<p class="article-kicker">Life testimony</p>
+			<h1 class="article-title">Jesus in my life: personal testimony</h1>
+			<p class="article-summary">My personal experience with Jesus Christ and how He changed my life forever.</p>
+			<div class="article-meta" aria-label="Metadati articolo">
+				<span>12 May 2026</span>
+				<span>&lt;15 min read</span>
+				<span>Author: codesavant23</span>
+			</div>
+		</section>
+
+		<div class="article-shell">
+			<aside class="toc-card" aria-label="Indice dell'articolo">
+				<h2>Index</h2>
+				<a href="#intro">Introduction</a>
+				<a href="#old-man">Who I was</a>
+				<a href="#1st-time">When i met God</a>
+				<a href="#2023-2025">Following years</a>
+				<a href="#2nd-time">The 2nd time</a>
+			</aside>
+
+			<article class="article-card">
+				<div class="article-cover">
+					<img
+						class="article-cover-image"
+						src="assets/bible_banner.png"
+						alt="Banner"
+						loading="eager"
+					/>
+				</div>
+
+				<div class="article-content">
+					<section id="intro">
+					</section>
+					
+					<section id="old-man">
+					</section>
+
+					<section id="1st-time">
+					</section>
+					
+					<section id="2023-2025">
+					</section>
+					
+					<section id="2nd-time">
+					</section>
+				</div>
+			</article>
+		</div>
+	</main>
+
+	<footer id="footer"></footer>
+	
+	<div class="image-modal" id="imageModal" aria-hidden="true">
+		<button class="image-modal-nav image-modal-prev" type="button" aria-label="Previous image">
+			<span class="arrow left arrow-size-small arrow-fix"></span>
+		</button>
+		
+		<img src="" alt="">
+		
+		<button class="image-modal-nav image-modal-next" type="button" aria-label="Next image">
+			<span class="arrow right arrow-size-small arrow-fix"></span>
+		</button>
+
+		<button class="image-modal-close" type="button" aria-label="Close image">
+			<span>&times;</span>
+		</button>
+	</div>
+
+	<script type="module">
+		import {include, loadPageParts, executeLoading, loadPageBehavior} from "./js/html_loader.js";
+		import {idleImagesModals} from "./js/image_modals.js";
+
+		const parts_to_load = [
+			include("header", "partials/header.html"),
+			
+			include("intro", "partials/life-testimony/sec-intro.html"),
+			include("old-man", "partials/life-testimony/sec-old_man.html"),
+			include("1st-time", "partials/life-testimony/sec-1st_time.html"),
+			include("2023-2025", "partials/life-testimony/sec-following_years.html"),
+			include("2nd-time", "partials/life-testimony/sec-2nd_time.html"),
+			
+			include("footer", "partials/footer.html")
+		];
+		
+		await loadPageParts(parts_to_load);
+		idleImagesModals();
+		await executeLoading(180);
+	
+		import("./js/menu.js");
+		import("./js/footer.js");
+	</script>
+</body>
+</html>
