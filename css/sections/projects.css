@@ -45,18 +45,6 @@
 	object-fit: cover;
 }
 
-.gradient-a {
-	background: radial-gradient(circle at 25% 20%, rgba(255, 255, 255, .28), transparent 26%), linear-gradient(135deg, rgba(255, 90, 31, .9), rgba(139, 92, 246, .8))
-}
-
-.gradient-b {
-	background: linear-gradient(135deg, rgba(34, 197, 94, .78), rgba(14, 165, 233, .72))
-}
-
-.gradient-c {
-	background: linear-gradient(135deg, rgba(139, 92, 246, .88), rgba(236, 72, 153, .72))
-}
-
 .browser-bar {
 	height: 28px;
 	border-radius: 12px;

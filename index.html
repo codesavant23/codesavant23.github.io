@@ -5,15 +5,58 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>codesavant23 Portfolio</title>
 	<meta name="description" content="codesavant23 Portfolio" />
+	
+	<style>
+		html:not(.page-ready) body {
+			visibility: hidden;
+			background: #06070d;
+		}
+
+		html:not(.page-ready)::before {
+			content: "";
+			position: fixed;
+			inset: 0;
+			z-index: 2147483647;
+			background: #06070d;
+		}
+	</style>
+	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css" />
+	
+	<link rel="stylesheet" href="/css/base/variables.css">
+	<link rel="stylesheet" href="/css/base/loader.css">
+	<link rel="stylesheet" href="/css/base/reset.css">
+	
+	<link rel="stylesheet" href="/css/components/navigation.css">
+	
+	<link rel="stylesheet" href="/css/sections/hero.css">
+	<link rel="stylesheet" href="/css/sections/technology.css">
+	<link rel="stylesheet" href="/css/sections/timeline.css">
+	<link rel="stylesheet" href="/css/sections/education.css">
+	<link rel="stylesheet" href="/css/sections/projects.css">
+	<link rel="stylesheet" href="/css/sections/contact.css">
+	
+	<link rel="stylesheet" href="/css/pages/pages_common.css">
+	<link rel="stylesheet" href="/css/pages/project-detail.css">
+	<link rel="stylesheet" href="/css/pages/article-detail.css">
+	
+	<link rel="stylesheet" href="/css/components/footer.css">
+	<link rel="stylesheet" href="/css/components/animations.css">
+	
+	<link rel="stylesheet" href="/css/responsive/desktop-about.css">
+	<link rel="stylesheet" href="/css/responsive/tablet.css">
+	<link rel="stylesheet" href="/css/responsive/mobile.css">
 </head>
 <body>
 	<div id="page-loader">
 		<div class="loader"></div>
 	</div>
+	
+	<script>
+		document.documentElement.classList.add("page-ready");
+	</script>
 	
 	<div class="noise" aria-hidden="true"></div>
 
@@ -118,7 +161,7 @@
 					</div>
 				</article>-->
 			</div>
-			<a class="view-all" href="https://www.github.com/codesavant23/">View All</a>
+			<a class="view-all" href="https://github.com/codesavant23?tab=repositories">View All</a>
 		</section>
 
 		<section id="contact" class="section contact reveal">

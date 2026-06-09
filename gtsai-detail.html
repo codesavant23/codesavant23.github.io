@@ -4,13 +4,53 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>GenTestsAI — codesavant23 Portfolio</title>
-	<meta name="description" content="GenTestsAI Project from codesavant23 Portfolio." />
+	<meta name="description" content="GenTestsAI Project from codesavant23 Portfolio" />
+	
+	<style>
+		html:not(.page-ready) body {
+			visibility: hidden;
+			background: #06070d;
+		}
+
+		html:not(.page-ready)::before {
+			content: "";
+			position: fixed;
+			inset: 0;
+			z-index: 2147483647;
+			background: #06070d;
+		}
+	</style>
+	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/base/variables.css" />
+	<link rel="stylesheet" href="css/base/loader.css" />
+	<link rel="stylesheet" href="css/base/reset.css" />
+	
+	<link rel="stylesheet" href="css/components/navigation.css" />
+	
+	<link rel="stylesheet" href="css/pages/pages_common.css" />
+	<link rel="stylesheet" href="css/pages/project-detail.css" />
+	<link rel="stylesheet" href="css/pages/article-detail.css" />
+	
+	<link rel="stylesheet" href="css/components/footer.css" />
+	<link rel="stylesheet" href="css/components/animations.css" />
+	
+	<link rel="stylesheet" href="css/responsive/desktop-about.css" />
+	<link rel="stylesheet" href="css/responsive/tablet.css" />
+	<link rel="stylesheet" href="css/responsive/mobile.css" />
 </head>
 <body class="project-detail-page">
+	<div id="page-loader">
+		<div class="loader"></div>
+	</div>
+	
+	<script>
+		document.documentElement.classList.add("page-ready");
+	</script>
+
 	<div class="noise" aria-hidden="true"></div>
 
 	<header id="header" class="nav-wrap">
@@ -34,7 +74,7 @@
 			</div>
 
 			<div class="detail-visual" aria-label="Visual preview of the Project">
-				<div class="project-media project-media-image">
+				<div class="detail-media">
 					<img src="assets/gtsai_preview.png" alt="Preview del progetto GenTests AI">
 				</div>
 			</div>
@@ -140,7 +180,7 @@
 					</ul>
 					
 					<h3>Technologies Used:</h3>
-					<div class="project-tech" aria-label="Technologies used">
+					<div class="detail-tech" aria-label="Technologies used">
 						<img src="https://skillicons.dev/icons?i=python" alt="Python">
 						<img src="https://skillicons.dev/icons?i=docker" alt="Docker">
 						<img src="assets/techs/tree-sitter-small.svg" alt="Tree-Sitter">
@@ -221,7 +261,7 @@
 	</footer>
 
 	<script type="module">
-		import {include, loadPageParts, loadPageBehavior} from "./js/html_loader.js";
+		import {include, loadPageParts, executeLoading} from "./js/html_loader.js";
 		
 		const parts_to_load = [
 			include("header", "partials/header.html"),
@@ -232,6 +272,8 @@
 	
 		import("./js/menu.js");
 		import("./js/footer.js");
+		
+		executeLoading(180);
 	</script>
 </body>
 </html>

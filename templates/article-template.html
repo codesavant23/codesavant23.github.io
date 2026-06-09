@@ -5,12 +5,52 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Titolo Articolo — codesavant23 Portfolio</title>
 	<meta name="description" content="Template per articolo o scritto del portfolio di codesavant23" />
+	
+	<style>
+		html:not(.page-ready) body {
+			visibility: hidden;
+			background: #06070d;
+		}
+
+		html:not(.page-ready)::before {
+			content: "";
+			position: fixed;
+			inset: 0;
+			z-index: 2147483647;
+			background: #06070d;
+		}
+	</style>
+	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css" />
+
+	<link rel="stylesheet" href="css/base/variables.css" />
+	<link rel="stylesheet" href="css/base/loader.css" />
+	<link rel="stylesheet" href="css/base/reset.css" />
+	
+	<link rel="stylesheet" href="css/components/navigation.css" />
+	
+	<link rel="stylesheet" href="css/pages/pages_common.css" />
+	<link rel="stylesheet" href="css/pages/project-detail.css" />
+	<link rel="stylesheet" href="css/pages/article-detail.css" />
+	
+	<link rel="stylesheet" href="css/components/footer.css" />
+	<link rel="stylesheet" href="css/components/animations.css" />
+	
+	<link rel="stylesheet" href="css/responsive/desktop-about.css" />
+	<link rel="stylesheet" href="css/responsive/tablet.css" />
+	<link rel="stylesheet" href="css/responsive/mobile.css" />
 </head>
 <body>
+	<div id="page-loader">
+		<div class="loader"></div>
+	</div>
+
+	<script>
+		document.documentElement.classList.add("page-ready");
+	</script>
+
 	<div class="noise" aria-hidden="true"></div>
 
 	<header id="header" class="nav-wrap">
@@ -18,8 +58,8 @@
 
 	<main class="article-page">
 		<section class="article-hero reveal">
-			<a class="back-link" href="index.html#projects">
-				Torna al portfolio
+			<a class="back-link" href="index.html">
+				Torna al Portfolio
 			</a>
 			<p class="article-kicker">Categoria / Articolo</p>
 			<h1 class="article-title">Titolo del tuo articolo, scritto o approfo</h1>
